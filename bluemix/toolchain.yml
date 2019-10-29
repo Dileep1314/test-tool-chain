@@ -27,11 +27,11 @@ template:
     # note: `repository` url param must always be provided while the `branch` url param is optional
     # the computed urls are of the same format as the original static urls shown above
     git url: >
-        '['https://github.com/chaitanya4419/test_devops']('https://github.com/chaitanya4419/test_devops')'
+        '['https://github.com/Dileep1314/test-tool-chain']('https://github.com/Dileep1314/test-tool-chain')'
     git branch: >
         $env.branch ?
-          [https://github.com/chaitanya4419/test_devops](https://github.com/chaitanya4419/test_devops):
-          [master](https://github.com/chaitanya4419/test_devops/tree/master)
+          [https://github.com/Dileep1314/test-tool-chain](https://github.com/Dileep1314/test-tool-chain):
+          [master](https://github.com/Dileep1314/test-tool-chain/tree/master)
 toolchain:
   name: 'simple-toolchain-{{timestamp}}'
   template:
@@ -45,7 +45,7 @@ services:
       repo_name: '{{toolchain.name}}'
       repo_url: >
         $env.type === 'link' ? 
-          $env.app_repo : 'https://github.com/chaitanya4419/test_devops'
+          $env.app_repo : 'https://github.com/Dileep1314/test-tool-chain'
       source_repo_url: >
         $env.type === 'fork' || $env.type === 'clone' ? 
           $env.app_repo : 'https://github.com/open-toolchain/node-hello-world'
