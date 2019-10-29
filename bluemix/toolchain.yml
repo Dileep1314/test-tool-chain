@@ -48,7 +48,7 @@ services:
           $env.app_repo : 'https://github.com/Dileep1314/test-tool-chain'
       source_repo_url: >
         $env.type === 'fork' || $env.type === 'clone' ? 
-          $env.app_repo : 'https://github.com/open-toolchain/node-hello-world'
+          $env.app_repo : 'https://github.com/Dileep1314/test-tool-chain'
       type: $env.type || 'clone'
       has_issues: true
       enable_traceability: true
@@ -71,7 +71,7 @@ services:
           API_KEY: '{{form.pipeline.parameters.api-key}}'
         execute: true
   messaging:
-     ervice_id: slack
+     service_id: slack
   $ref: slack.ym
   webide:
     service_id: orion
