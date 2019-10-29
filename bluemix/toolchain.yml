@@ -72,7 +72,7 @@ services:
         execute: true
   messaging:
      service_id: slack
-  $ref: slack.ym
+  $ref: slack.yml
   webide:
     service_id: orion
 form:
